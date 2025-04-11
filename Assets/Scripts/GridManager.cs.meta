@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 5b0106b27e28a48dcb40c8a96a9c8594
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - squarePrefab: {fileID: 6997153884150651739, guid: 34fb539684465472cac014a43dd9a464, type: 3}
+  - gridPanel: {instanceID: 0}
+  - promptText: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
