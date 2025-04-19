@@ -9,11 +9,17 @@ public class SelectSquare : MonoBehaviour
     private Image image;
     //private Color hiddenColor = new Color(0.6f, 0.6f, 0.6f); // default hidden gray
     private bool isMatched = false;
-
+    private Outline outliner;
+    
     void Awake()
     {
         button = GetComponent<Button>();
         image = GetComponent<Image>();
+        outliner = GetComponent<Outline>();
+        if (outliner != null)
+        {
+            outliner.effectColor = Color.clear;
+        }
       //SUSPECT  button.onClick.AddListener(OnClick);
     }
 
@@ -48,6 +54,8 @@ public Color AssignedColor => assignedColor;
         image.GetComponent<Outline>().effectColor = Color.green;
         button.interactable = false;*/
         isMatched = true;
+        image.color = Color.gray;
+        GetComponent<Button>().interactable = false;
     }
 
      public void OnClick()
@@ -64,11 +72,12 @@ public Color AssignedColor => assignedColor;
         image.color = assignedColor;
         Debug.Log("Assigned color: " + assignedColor);
     }
-/*
-    public void HideColor()
-    {
-        image.color = hiddenColor;
-    }
-    */
+
+    public void ClearHighlight()
+{
+    SetOutline(Color.clear);
+}
+
+
     
 }
