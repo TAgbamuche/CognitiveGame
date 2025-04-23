@@ -166,7 +166,7 @@ public class GridManager : MonoBehaviour
                 secondSelected.SetOutline(Color.red);
               //  StartCoroutine(HideAfterDelay(0.8f));
             }
-
+            
             // Reset for next round SUSPECT
              StartCoroutine(ResetSelectionAfterDelay(0.8f));
         }

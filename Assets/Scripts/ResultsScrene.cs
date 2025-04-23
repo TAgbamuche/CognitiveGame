@@ -16,6 +16,11 @@ public class ResultsScreen : MonoBehaviour
 
     void Start()
     {
+        if (GameStats.Instance == null)
+        {
+        Debug.LogWarning("GameStats instance not found!");
+        return;
+        }
         ShowStats();
         ShowAchievements();
         DrawGraph();
@@ -37,10 +42,10 @@ public class ResultsScreen : MonoBehaviour
         achievementText.text = "";
 
         if (GameStats.Instance.totalMatches >= 3)
-            achievementText.text += "🏆 3-Times Matcher\n";
+            achievementText.text += "3-Times Matcher\n";
 
         if (GameStats.Instance.totalScore >= 60)
-            achievementText.text += "💪 Rescuer\n";
+            achievementText.text += "Rescuer\n";
 
         if (achievementText.text == "")
             achievementText.text = "No achievements this time.";

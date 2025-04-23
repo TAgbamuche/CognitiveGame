@@ -15,7 +15,7 @@ public class UIManager : MonoBehaviour
 
     void Start()
     {
-        StartTimer();
+        //StartTimer();
     }
 
     void Update()
@@ -32,7 +32,7 @@ public class UIManager : MonoBehaviour
             {
                 isTimerRunning = false;
                 timeRemaining = 0;
-                GameTimer.text = "Time: 00:00";
+                GameTimer.text = "Game Over!";
                 GameOver();
             }
         }
@@ -48,7 +48,10 @@ public class UIManager : MonoBehaviour
     {
         GameTimer.text = "Time's up!";
         gridManager.HandleGameOver(); // Notify GridManager
-        Invoke(nameof(RestartGame), 2f);
+       // Invoke(nameof(RestartGame), 2f);
+        GameStats.Instance.totalTime = 120f - timeRemaining; //calculates total time taken
+        SceneManager.LoadScene("ResultScene"); //load result scene
+
     }
 
     public void RestartGame()
