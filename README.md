@@ -19,10 +19,17 @@ Some features include scoring, a countdown timer, accessibility features, and pr
 
 ##  How to Run the Game
 
-1. Download the `CogTestv2.0.zip` from the `Builds` folder 
+### For Mac Users
+1. Download the `CogTestv3.0.zip` from the `Builds` folder 
 2. Unzip the file
 3. Double-click `CogTest.app` to launch the game
 4. If Mac does not let you open it, right-click in Finder then click open.
+
+### For Window Users
+1. Download the `CogTest3.0` folder from the `Builds` folder 
+2. Unzip `CogTest3.0.zip` file
+3. Take the '.exe file to the `CogTest3.0` folder 
+4. Double-click `CogTest3.0.exe` to launch the game
 
 ---
 
